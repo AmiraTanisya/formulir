@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulir Kepuasan Klien</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-
-    <div class="left">
-        <h1>Formulir <br> Kepuasan Klien</h1>
-        <p>Terima kasih telah bekerja sama dengan AmanMedia. 
-        Silakan lengkapi formulir di bawah ini untuk memberikan umpan balik Anda.</p>
-
-        <ul>
-            <li>Secure SSL Encryption</li>
-            <li>Data Protected & Private</li>
-            <li>24/7 Dedicated Support</li>
-        </ul>
-    </div>
-    
-    <form name="formulir" data-netlify="true" hidden>
+    <form name="formulir" data-netlify="true" netlify-honeypot="bot-field" hidden>
         <input type="text" name="nama">
         <input type="email" name="email">
         <input type="text" name="proyek">
@@ -31,51 +19,72 @@
         <input type="radio" name="rating" value="3">
         <input type="radio" name="rating" value="2">
         <input type="radio" name="rating" value="1">
-        <textarea rows="4" name="pesan"></textarea>
+        <textarea name="pesan"></textarea>
     </form>
 
-    <form name="formulir" method="post" data-netlify="true">
-        <input type="hidden" name="form-name" value="formulir">
-    <div class="right">
-            
-            <label>Nama Lengkap</label>
-            <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
+    <div class="container">
 
-            <label>Email</label>
-            <input type="email" name="email" placeholder="nama@email.com" required>
+        <div class="left">
+            <h1>Formulir <br> Kepuasan Klien</h1>
 
-            <label>Nama Proyek</label>
-            <input type="text" name="proyek" placeholder="Contoh: Website Redesign">
+            <p> Terima kasih telah bekerja sama dengan AmanMedia.
+                Silakan lengkapi formulir di bawah ini untuk memberikan umpan balik Anda. </p>
 
-            <textarea name="pesan" rows="4"></textarea>
+            <ul>
+                <li>Secure SSL Encryption</li>
+                <li>Data Protected & Private</li>
+                <li>24/7 Dedicated Support</li>
+            </ul>
+        </div>
 
-            <label>Tingkat Kepuasan</label>
-            <div class="rating">
-                <input type="radio" name="rating" id="star5" value="5">
-                <label for="star5">★</label>
+        <div class="right">
 
-                <input type="radio" name="rating" id="star4" value="4">
-                <label for="star4">★</label>
+            <form name="formulir" method="POST" data-netlify="true">
 
-                <input type="radio" name="rating" id="star3" value="3">
-                <label for="star3">★</label>
+                <input type="hidden" name="form-name" value="formulir">
 
-                <input type="radio" name="rating" id="star2" value="2">
-                <label for="star2">★</label>
+                <label>Nama Lengkap</label>
+                <input type="text" name="nama" placeholder="Masukkan nama lengkap" required>
 
-                <input type="radio" name="rating" id="star1" value="1">
-                <label for="star1">★</label>
-            </div>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="nama@email.com" required>
 
-            <label>Pesan / Testimoni</label>
-            <textarea rows="4" name="pesan" placeholder="Ceritakan pengalaman Anda bekerja sama dengan kami..."></textarea>
+                <label>Nama Proyek</label>
+                <input type="text" name="proyek" placeholder="Contoh: Website Redesign">
 
-            <button type="submit">Kirim Testimoni</button>
+                <label>Tingkat Kepuasan</label>
 
-        </form>
+                <div class="rating">
+
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5">★</label>
+
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1">★</label>
+
+                </div>
+
+                <label>Pesan / Testimoni</label>
+                <textarea name="pesan" rows="4"
+                    placeholder="Ceritakan pengalaman Anda bekerja sama dengan kami..."></textarea>
+
+                <button type="submit">Kirim Testimoni</button>
+
+            </form>
+
+        </div>
+
     </div>
 
-</div>
-
 </body>
+
 </html>
